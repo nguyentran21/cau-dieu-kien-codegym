@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: gray;
+      }
+      div {
+        float: right;
+        margin-right: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      Các loại hoa quả để xem giá
+      <ul>
+        <li>Ổi</li>
+        <li>Dưa Hấu</li>
+        <li>Táo</li>
+        <li>Xoài</li>
+        <li>Cam</li>
+        <li>Chôm Chôm</li>
+        <li>Măng Cụt</li>
+      </ul>
+    </div>
+    <h1>Giá Hoa quả</h1>
+    <input type="text" id="search" /> <button onclick="kt()">Xem Giá</button>
+    <p id="kq"></p>
+
+    <script>
+      function kt() {
+        let a = document.getElementById("search").value;
+        console.log(a);
+        switch (a) {
+          case (a = "Ổi"):
+          case (a = "Dưa Hấu"):
+            result = "20.000 VNĐ/kg";
+            break;
+          case (a = "Táo"):
+          case (a = "Xoài"):
+            result = "30.000 VNĐ/kg";
+            break;
+          case (a = "Cam"):
+          case (a = "Chôm  Chôm"):
+            result = "40.000 VNĐ/kg";
+            break;
+          case (a = "Măng Cụt"):
+            result = "50.000 VNĐ/kg";
+            break;
+
+          default:
+            result = "khong co ";
+            break;
+        }
+        document.getElementById("kq").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>

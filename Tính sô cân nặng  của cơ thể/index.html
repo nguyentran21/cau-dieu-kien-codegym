@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <span>Nhập cân năng</span><input type="number" id="can_nang" />
+    <br />
+    <span>Nhập chiều cao</span><input type="number" id="chieu_cao" /> <br />
+    <button onclick="kt()">kiem tra</button>
+    <p id="kq"></p>
+    <script>
+      function kt() {
+        let a = +document.getElementById("can_nang").value;
+        let b = +document.getElementById("chieu_cao").value;
+        let A = a / (b * b);
+        if (A < 16) {
+          result = "gầy độ III";
+        } else if (A >= 16 && A < 17) {
+          result = "gay do II";
+        } else if (A >= 17 && A < 18.5) {
+          result = "gay do I";
+        } else if (A >= 18.5 && A < 25) {
+          result = "binh thuong";
+        } else if (A >= 25 && A < 30) {
+          result = "thua can";
+        } else if (A >= 30 && A < 35) {
+          result = "beo phi do I";
+        } else if (A >= 35 && A < 40) {
+          result = "beo phi do II";
+        } else {
+          result = "beo phi do III";
+        }
+        document.getElementById("kq").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>

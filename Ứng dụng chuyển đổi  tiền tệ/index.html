@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        background-color: gray;
+      }
+      div,
+      input,
+      p {
+        display: inline-block;
+      }
+      div,
+      button {
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>Amount</p>
+      <input type="number" id="dl" />
+    </div>
+    <div>
+      <p>Amount</p>
+      <select id="kv1">
+        <option value="23000">Việt Nam</option>
+        <option value="1">Mỹ</option>
+        <option value="160">Nhật Bản</option>
+      </select>
+    </div>
+
+    <div>
+      <p>Amount</p>
+      <select id="kv2">
+        <option value="23000">VND</option>
+        <option value="1">USD</option>
+        <option value="160">YEN</option>
+      </select>
+    </div>
+
+    <button onclick="kt()">Convert</button><br />
+    <p style="margin-left: 30px" id="kq"></p>
+    <script>
+      function kt() {
+        let a = +document.getElementById("dl").value;
+        let a1 = +document.getElementById("kv1").value;
+        let a2 = +document.getElementById("kv2").value;
+
+        result = (a * a2) / a1;
+        document.getElementById("kq").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>
